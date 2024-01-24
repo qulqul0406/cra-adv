@@ -24,7 +24,7 @@ function App() {
                     <h6 class="card-title">啊吧啊吧
                       <span className='float-end'>NT$220</span>
                     </h6>
-                    <button type='button' class="btn btn-outline-dark w-100">加入購物車</button>
+                    <button type='button' class="btn btn-outline-primary w-100">加入購物車</button>
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ function App() {
                     <h6 class="card-title">啊吧啊吧
                       <span className='float-end'>NT$220</span>
                     </h6>
-                    <button type='button' class="btn btn-outline-dark w-100">加入購物車</button>
+                    <button type='button' class="btn btn-outline-primary w-100">加入購物車</button>
                   </div>
                 </div>
               </div>
@@ -48,7 +48,19 @@ function App() {
                     <h6 class="card-title">啊吧啊吧
                       <span className='float-end'>NT$220</span>
                     </h6>
-                    <button type='button' class="btn btn-outline-dark w-100">加入購物車</button>
+                    <button type='button' class="btn btn-outline-primary w-100">加入購物車</button>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div class="card">
+                  <img src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D" 
+                  class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h6 class="card-title">啊吧啊吧
+                      <span className='float-end'>NT$220</span>
+                    </h6>
+                    <button type='button' class="btn btn-outline-primary w-100">加入購物車</button>
                   </div>
                 </div>
               </div>
@@ -60,19 +72,7 @@ function App() {
                     <h6 class="card-title">啊吧啊吧
                       <span className='float-end'>NT$220</span>
                     </h6>
-                    <button type='button' class="btn btn-outline-dark w-100">加入購物車</button>
-                  </div>
-                </div>
-              </div>
-              <div className="col">
-                <div class="card">
-                  <img src="https://images.unsplash.com/photo-1682687220777-2c60708d6889?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D" 
-                  class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h6 class="card-title">啊吧啊吧
-                      <span className='float-end'>NT$220</span>
-                    </h6>
-                    <button type='button' class="btn btn-outline-dark w-100">加入購物車</button>
+                    <button type='button' class="btn btn-outline-primary w-100">加入購物車</button>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,9 @@ function App() {
                       <a href='#'>x</a>
                     </td>
                     <td>
-                      <img src='' alt=''/>
+                      <img src='https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D' 
+                      className='table-image'
+                      alt=''/>
                     </td>
                     <td>啊吧啊吧
                       <br/>
