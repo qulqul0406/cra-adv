@@ -1,10 +1,21 @@
+import { useReducer } from 'react';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
 import Cart from './components/cart';
+import { CartContext } from './store';
 
 function App() {
+  const cartReducer = useReducer((state, action) => {
+    console.log(action)
+    switch(action){
+      default:
+        return state;
+    }
+  }, {
+    cartList:[],
+  })
   return (
-    <div className="App">
+    <CartContext.Provider value={cartReducer}>
       <Navbar />
       <div className='container mt-4'>
         <div className="row">
@@ -16,7 +27,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+    </CartContext.Provider>
   );
 }
 
