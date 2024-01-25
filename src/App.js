@@ -7,10 +7,20 @@ import { CartContext } from './store';
 function App() {
   const cartReducer = useReducer((state, action) => {
     const cartList = [...state.cartList]
+    // #1 先取得當前購物車目標品項的索引
+    const index = cartList.findIndex((item)=> item.id === action.payload.id);
+    console.log(index)
     console.log(action)
     switch(action.type){
       case 'ADD_TO_CART':
-        cartList.push(action.payload)
+        if(index === -1){
+          // 還未加到購物車內
+          cartList.push(action.payload)
+        }else{
+          // 當前購物車的項目與已被加入的項目一致
+          // 記得將index.js的除錯模式移除，不然會重複執行
+          cartList[index].quantity += action.payload.quantity
+        }
         return {
           ...state,
           cartList,
