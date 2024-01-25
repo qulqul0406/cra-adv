@@ -6,8 +6,15 @@ import { CartContext } from './store';
 
 function App() {
   const cartReducer = useReducer((state, action) => {
+    const cartList = [...state.cartList]
     console.log(action)
-    switch(action){
+    switch(action.type){
+      case 'ADD_TO_CART':
+        cartList.push(action.payload)
+        return {
+          ...state,
+          cartList,
+        }
       default:
         return state;
     }
