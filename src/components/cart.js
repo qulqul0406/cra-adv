@@ -24,7 +24,25 @@ export default function Cart() {
                         <small className='text-muted'>NT$ {item.price}</small>
                     </td>
                     <td>
-                        <select name='' id='' className='form-select'></select>
+                        <select name='' id='' className='form-select'
+                        value={item.quantity}
+                        onChange={(e)=>{
+                            e.preventDefault();
+                            const quantity = parseInt(e.target.value);
+                            despatch({
+                                type: 'CHANGE_CART_QUANTITY',
+                                payload:{
+                                    ...item,
+                                    quantity
+                                }
+                            })
+                        }}>
+                            {[...Array(20)].map((_,i)=>{
+                                return(
+                                    <option value={i+1} key={i}>{i+1}</option>
+                                )
+                            })}
+                        </select>
                     </td>
                     <td className='text-end'>NT$ {item.price * item.quantity}</td>
                 </tr>
