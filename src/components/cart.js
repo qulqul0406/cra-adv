@@ -60,8 +60,8 @@ export default function Cart() {
             </tbody>
             <tfoot>
                 <tr>
-                    <td colSpan={5} className='text-end'>
-                        總金額 NT$ 440
+                    <td colSpan={5} className='text-end' >
+                        總金額 NT$ {state.total || 0}
                     </td>
                 </tr>
             </tfoot>

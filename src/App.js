@@ -21,18 +21,32 @@ function App() {
           // 記得將index.js的除錯模式移除，不然會重複執行
           cartList[index].quantity += action.payload.quantity
         }
+        const array = cartList.map((item)=>{
+          return item.quantity * item.price
+        })
+
+        // reduce
+        const total = calculateTotalPrice(cartList);
+
         return {
           ...state,
           cartList,
+          total: calculateTotalPrice(cartList),
         }
       case 'CHANGE_CART_QUANTITY':
         cartList[index].quantity = action.payload.quantity
         return {
           ...state,
           cartList,
+          total: calculateTotalPrice(cartList),
         }
       case 'REMOVE_CART_ITEM':
         cartList.splice(index, 1)
+        return {
+          ...state,
+          cartList,
+          total: calculateTotalPrice(cartList),
+        }
       default:
         return state;
     }
@@ -54,6 +68,11 @@ function App() {
       </div>
     </CartContext.Provider>
   );
+}
+
+function calculateTotalPrice(cartList) {
+  return cartList.map((item) => item.quantity * item.price)
+  .reduce((a, b) => a + b, 0);
 }
 
 export default App;
