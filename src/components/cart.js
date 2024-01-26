@@ -12,7 +12,15 @@ export default function Cart() {
                 return (
                     <tr key={item.id}>
                     <td>
-                        <a href='#'>x</a>
+                        <button type="button" className="btn btn-sm"
+                        onClick={()=>{
+                            despatch({
+                                type: 'REMOVE_CART_ITEM',
+                                payload:{
+                                    ...item,
+                                }
+                            })
+                        }}>x</button>
                     </td>
                     <td>
                         <img src={item.img}

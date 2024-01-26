@@ -31,6 +31,8 @@ function App() {
           ...state,
           cartList,
         }
+      case 'REMOVE_CART_ITEM':
+        cartList.splice(index, 1)
       default:
         return state;
     }
